@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+</head>
+<body>
+    <h1>{{product.name}}</h1>
+    <p>Loại sản phẩm : {{ product.category}}</p>
+    <p>Giá : {{product.price}}</p>
+    <p>Số lượng : {{product.quantity}} </p>
+    <h3>Review</h3>
+    {%  if review %}
+        <p>{{review.content}}</p>
+    {% else %} <p>Không có review nào</p>
+    {% endif %}
+</body>
+</html>

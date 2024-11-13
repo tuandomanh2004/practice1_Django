@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show products</title>
-</head>
-<body>
-    {% for product in all_products %}
-        <h1><a href="{% url 'product_detail' product.pk %}">{{product.name}}</a></h1>
-    {% endfor %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %} 
+{% for product in all_products %}
+<h1><a href="{% url 'product_detail' product.pk %}">{{product.name}}</a></h1>
+{% endfor %}
+{% endblock content %}

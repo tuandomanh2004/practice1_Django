@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <header>
+        <h2><a href="{% url 'home' %}">Home</a></h2>
+        <h2><a href="{% url 'product_new' %}">Add product</a></h2>
+        <h2><a href="{% url 'show_products' %}">Show products</a></h2>
+    </header>
+    <main>
+        {% block content%}
+        <h1>Welcome home !!!</h1>
+        {% endblock content%}
+    </main>
+</body>
+</html>

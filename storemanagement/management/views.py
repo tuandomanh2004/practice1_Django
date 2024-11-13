@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView , DetailView , CreateView , DeleteView , UpdateView
+from django.urls import reverse_lazy
 from .models import Product , Category , Review
 # Create your views here.
 def home(request) : 
@@ -20,3 +21,7 @@ class ProductUpdateView(UpdateView) :
     model = Product
     template_name = 'update_product.html'
     fields = '__all__'
+class ProductDeleteView(DeleteView) :
+    model = Product
+    template_name = 'delete_product.html'
+    success_url = reverse_lazy('home')

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+    Delete product
+{% endblock title %}
+{% block content %}
+
+    <form action="" method = "post">
+        {% csrf_token %}
+        <h3>Bạn có muốn xóa v/v {{product.name}} ra khỏi hệ thống ?</h3>
+        <input type="submit" value = 'Xác nhận'>
+    </form>
+{% endblock content%}

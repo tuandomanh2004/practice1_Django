@@ -16,5 +16,6 @@
     {% else %} <p>Không có review nào</p>
     {% endif %}
     <h3><a href="{% url 'product_edit' product.pk %}">Chỉnh sửa thông tin sản phẩm</a></h3>
+    <h3><a href="{% url 'product_delete' product.pk %}">Xóa sản phẩm</a></h3>
 </body>
 </html>
